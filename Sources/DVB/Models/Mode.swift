@@ -20,7 +20,7 @@ public enum Mode {
 
     public var rawValue: String {
         switch self {
-        case .bus return "bus"
+        case .bus: return "bus"
         case .tram: return "tram"
         case .cityBus: return "citybus"
         case .intercityBus: return "intercitybus"
