@@ -16,7 +16,7 @@ func post<T: Decodable, U: Encodable>(_ url: URL,
                                       completion: @escaping (Result<T>) -> Void) {
     do {
         let encoder = JSONEncoder()
-        //        encoder.dateEncodingStrategy = .custom(SAPDateEncoder.strategy) // TODO:
+        encoder.dateEncodingStrategy = .custom(SAPDateEncoder.strategy)
         let data = try encoder.encode(data)
         _post(url, data: data, session: session, completion: completion)
     } catch let error {
