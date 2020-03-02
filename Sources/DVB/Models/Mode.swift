@@ -11,10 +11,11 @@ public enum Mode {
     case cableway
     case ferry
     case hailedSharedTaxi
-
     case footpath
     case rapidTransit
-
+    case mobilityStairsUp
+    case mobilityStairsDown
+    
     /// A placeholder value for future additions.
     case unknown(String)
 
@@ -32,6 +33,8 @@ public enum Mode {
         case .hailedSharedTaxi: return "alita"
         case .footpath: return "footpath"
         case .rapidTransit: return "rapidtransit"
+        case .mobilityStairsUp: return "mobilitystairsup"
+        case .mobilityStairsDown: return "mobilitystairsdown"
         case .unknown(let value): return value
         }
     }
@@ -50,6 +53,9 @@ public enum Mode {
             .ferry,
             .hailedSharedTaxi,
             .footpath,
+            .rapidTransit,
+            .mobilityStairsDown,
+            .mobilityStairsUp
         ]
     }
 
