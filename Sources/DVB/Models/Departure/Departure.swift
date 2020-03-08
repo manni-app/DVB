@@ -12,6 +12,30 @@ public struct Departure {
     public let state: State?
     public let routeChanges: [String]?
     public let diva: Diva?
+    
+    public init(
+        id: String,
+        line: String,
+        direction: String,
+        platform: Platform? = nil,
+        mode: Mode,
+        realTime: Date? = nil,
+        scheduledTime: Date,
+        state: State? = nil,
+        routeChanges: [String]? = nil,
+        diva: Diva? = nil
+    ) {
+        self.id = id
+        self.line = line
+        self.direction = direction
+        self.platform = platform
+        self.mode = mode
+        self.realTime = realTime
+        self.scheduledTime = scheduledTime
+        self.state = state
+        self.routeChanges = routeChanges
+        self.diva = diva
+    }
 
     /// The actual ETA. Should only be different from the scheduled ETA if not on time.
     public var ETA: Int {
